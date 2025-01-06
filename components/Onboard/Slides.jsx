@@ -1,35 +1,43 @@
-import { View, Image, ScrollView } from 'react-native';
-import styles from './slides.style';
-import { COLORS, SIZES } from '../../constants/theme';
-import ReusableText from '../Reusable/ReusableText';
-import ReusableButton from '../Buttons/ReusableButton';
-import { useNavigation } from '@react-navigation/native';
+import { View, Image } from "react-native";
+import React from "react";
+import styles from "./slides.style";
+import {
+  HeightSpacer,
+  ReusableBtn,
+  ReusableText,
+} from "../../components/index";
+import { COLORS, SIZES } from "../../constants/theme";
+import { useNavigation } from "@react-navigation/native";
 
-const Slides = ({item}) => {
+const Slides = ({ item }) => {
   const navigation = useNavigation();
+  
   return (
     <View>
-        <Image source={item.image} style={styles.image} />
-        <View style={styles.stack}>
-        <ScrollView>
-            <ReusableText 
-            size={SIZES.xxLarge} 
-            color={COLORS.white} 
-            family={'medium'} 
-            text={item.title}/>
+      <Image source={item.image} style={styles.image} />
 
-            <ReusableButton 
-            btnText={'Lets GO!'} 
-            textColor={COLORS.white} 
-            bgColor={COLORS.red} 
-            borderColor={COLORS.red} 
-            borderWidth={0} 
-            onPress={() => {
-              navigation.navigate('Bottom');
-            }}/>
-        </ScrollView>
-        </View>
-        
+      <View style={styles.stack}>
+        <ReusableText
+          text={item.title}
+          family={"medium"}
+          size={SIZES.xxLarge}
+          color={COLORS.white}
+        />
+
+        <HeightSpacer height={40} />
+
+        <ReusableBtn
+          onPress={() => navigation.navigate('Bottom')}
+          btnText={"Let's go"}
+          width={(SIZES.width - 50) / 2.2}
+          backgroundColor={COLORS.red}
+          borderColor={COLORS.red}
+          borderWidth={0}
+          textColor={COLORS.white}
+        />
+
+       
+      </View>
     </View>
   );
 };

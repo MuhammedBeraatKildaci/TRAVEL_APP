@@ -1,11 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import * as Splashscreen from "expo-splash-screen";
 import { useCallback } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Onboarding } from './screens';
+import { Onboarding, Search } from './screens';
 import BottomTabNavigation from './navigation/BottomTabNavigation';
 
 
@@ -34,6 +33,7 @@ export default function App() {
       <Stack.Navigator>
       <Stack.Screen name="Onboarding" component={Onboarding} options={{headerShown:false}}/>
       <Stack.Screen name="Bottom" component={BottomTabNavigation} options={{headerShown:false}}/>
+      <Stack.Screen name="Search" component={Search} options={{headerShown:false}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

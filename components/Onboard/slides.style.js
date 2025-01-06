@@ -1,19 +1,18 @@
-import { StyleSheet} from 'react-native';
-import { SIZES } from '../../constants/theme';
-const styles = StyleSheet.create({
-    image:{
-        resizeMode:'cover',
-        width:SIZES.width,
-        height:SIZES.height
-    },
-    stack:{
-        position:'absolute',
-        bottom:0,
-        marginVertical:50,
-        marginHorizontal:10,
-        justifyContent:'center',
-        width:SIZES.width - 40,
-    }
-});
+import { StyleSheet } from "react-native";
+import {SIZES} from "../../constants/theme"
 
-export default styles;
+const styles = StyleSheet.create({
+    image: {
+        resizeMode: "cover",
+        width: SIZES.width,
+        height: SIZES.height
+    },
+    stack: {
+        position: "absolute",
+        bottom: 0,
+        marginBottom: 60,
+        marginHorizontal: 20
+    }
+})
+
+export default styles

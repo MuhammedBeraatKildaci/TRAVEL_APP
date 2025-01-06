@@ -1,19 +1,19 @@
-import { Text,StyleSheet } from 'react-native';
-import { COLORS } from '../../constants/theme';
+import { StyleSheet, Text } from 'react-native'
+import React from 'react'
 
-const ReusableText = ({text,family,size,color}) => {
+const ReusableText = ({text, family, size, color, align}) => {
   return (
-    <Text style={styles.textStyle(family,size,color)}>{text}</Text>
-  );
-};
+      <Text style={styles.textStyle(family, size, color, align)}>{text}</Text>
+  )
+}
 
+export default ReusableText
 
 const styles = StyleSheet.create({
-    textStyle:(family,size,color) => ({
-        fontFamily:family ,
-        fontSize:size || 12,
-        color:color || COLORS.black
+    textStyle: (family, size, color, align)=> ({
+        fontFamily: family,
+        fontSize: size,
+        color: color,
+        textAlign: align
     })
-});
-
-export default ReusableText;
+})
