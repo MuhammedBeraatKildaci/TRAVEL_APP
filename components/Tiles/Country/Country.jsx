@@ -1,4 +1,4 @@
-import { View, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import { TEXT, COLORS } from "../../../constants/theme";
 import { NetworkImage, ReusableText, HeightSpacer } from "../../../components/index";
