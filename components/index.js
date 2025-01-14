@@ -4,9 +4,11 @@ import HeightSpacer from "./Reusable/HeightSpacer";
 import WidthSpacer from "./Reusable/WidthSpacer";
 import NetworkImage from "./Reusable/NetworkImage";
 import Recommendations from "./Home/Recommendations";
-import ReusableTile from "./Reusable/ReusableTile";
 import Rating from "./Reusable/Rating";
-import BestHotels from "./Home/BestHotels";
+import AppBar from './Reusable/AppBar';
+import DescriptionText from "./Reusable/DescriptionText";
+import PopularList from "./Country/PopularList";
+
 export {
     ReusableText,
     ReusableBtn,
@@ -14,7 +16,8 @@ export {
     WidthSpacer, 
     NetworkImage,
     Recommendations,
-    ReusableTile,
     Rating,
-    BestHotels
+    AppBar,
+    DescriptionText,
+    PopularList
 }
