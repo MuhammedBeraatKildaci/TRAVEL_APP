@@ -20,7 +20,7 @@ import reusable from "../../components/Reusable/reusable.style";
 import { Feather } from "@expo/vector-icons";
 import { useRoute } from '@react-navigation/native';
 
-const PlaceDetails = () => {
+const PlaceDetails = ({navigation}) => {
     const route = useRoute();
     const id = route.params
 
@@ -61,7 +61,7 @@ const PlaceDetails = () => {
       <NetworkImage
         source={place.imageUrl}
         width={"100%"}
-        height={500}
+        height={350}
         radius={30}
       />
 
