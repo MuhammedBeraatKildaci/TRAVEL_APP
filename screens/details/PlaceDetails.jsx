@@ -23,7 +23,6 @@ import { useRoute } from '@react-navigation/native';
 const PlaceDetails = ({navigation}) => {
     const route = useRoute();
     const id = route.params
-
     const place = {
       "_id": "64d062a3de20d7c932f1f70a",
       "country_id": "64c62bfc65af9f8c969a8d04",

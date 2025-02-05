@@ -1,17 +1,10 @@
-import { View, Text, TextInput, TouchableOpacity, Image, FlatList} from 'react-native'
-import React, {useState, useEffect} from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
-import reusable from '../../components/Reusable/reusable.style'
-import styles from './search.style';
-import {Feather, AntDesign } from '@expo/vector-icons'
-import { COLORS } from '../../constants/theme';
-import { AppBar, HeightSpacer } from '../../components';
-import ReusableTile from '../../components/Reusable/ReusableTile';
+import { FlatList, View } from 'react-native'
+import React from 'react';
+import ReusableTile from '../../components/Reusable/ReusableTile'
 
-const Search = ({navigation}) => {
-  const [searchKey, setSearchKey] = useState('')
-  const [searchResults, setSearchResults] = useState([])
-  const search = [
+
+const TopTrips = ({navigation}) => {
+  const places = [
     {
       _id: "64c631650298a05640539adc",
       country_id: "64c62bfc65af9f8c969a8d04",
@@ -54,49 +47,22 @@ const Search = ({navigation}) => {
     }
   ];
 
-
   return (
-   <SafeAreaView style={reusable.container}>
-     
-    <View style={styles.searchContainer}>
-     
-      <View style={styles.searchWrapper}>
-      
-        <TextInput 
-        style={styles.input}
-        value={searchKey}
-        onChangeText={setSearchKey}
-        placeholder='Where do you want to visit'
-        />
-      </View>
+    <View style={{margin: 20}}>
 
-      <TouchableOpacity style={styles.searchBtn}>
-        <Feather name='search' size={24} color={COLORS.white}/>
-      </TouchableOpacity>
-    </View>
-
-    {search.length === 0 ? (
-      <View>
-        <HeightSpacer height={'20%'}/>
-        <Image 
-        source={require('../../assets/images/search.png')}
-        style={styles.searchImage}
-      />
-      </View>
-    ): (
       <FlatList 
-      data={search}
+      data={places}
+      showVerticalScrollIndicator={false}
       keyExtractor={(item)=> item._id}
       renderItem={({item})=> (
-        <View style={styles.tile}>
-        <ReusableTile item={item} onPress={()=> navigation.navigate('PlaceDetails', item._id)}/>
+        <View style={{marginBottom: 10}}>
+          <ReusableTile item={item} onPress={()=> navigation.navigate('PlaceDetails', item._id)}/>
         </View>
       )}
       />
-    )}
-
-   </SafeAreaView>
+      
+    </View>
   )
 }
 
-export default Search
+export default TopTrips
