@@ -12,6 +12,7 @@ import {
 import styles from "./topTab.style";
 const Tab = createMaterialTopTabNavigator();
 
+// https://d326fntlu7tb1e.cloudfront.net/uploads/c87b6dfb-ee4b-47fa-9c02-6ccca2893a6f-vinci_06.jpg
 
 const TopTab = () => {
   return (
@@ -23,7 +24,7 @@ const TopTab = () => {
               "https://i1.sndcdn.com/artworks-ouAM7ZgclvZF62pc-IzY9LA-t500x500.jpg"
             }
             width={"100%"}
-            height={350}
+            height={300}
             radius={0}
           />
 
@@ -40,7 +41,7 @@ const TopTab = () => {
           <View style={styles.profile}>
             <Image
               source={{
-                uri: "https://www.stampthewax.com/wp-content/uploads/2020/02/AAK21539.jpg",
+                uri:  "https://www.stampthewax.com/wp-content/uploads/2020/02/AAK21539.jpg",
               }}
               style={styles.image}
             />
@@ -51,8 +52,8 @@ const TopTab = () => {
               <ReusableText
                 text={"King Andre"}
                 family={"medium"}
-                size={SIZES.xLarge}
-                color={COLORS.white}
+                size={SIZES.medium}
+                color={COLORS.black}
               />
             </View>
 
@@ -61,7 +62,7 @@ const TopTab = () => {
             <View style={styles.name}>
               <View style={{ alignItems: "center" }}>
                 <ReusableText
-                  text={"kingandre@gmail.com"}
+                  text={"gfadghasdfh@gmail.com"}
                   family={"medium"}
                   size={SIZES.medium}
                   color={COLORS.white}

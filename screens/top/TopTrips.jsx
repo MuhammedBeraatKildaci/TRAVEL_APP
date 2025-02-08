@@ -46,7 +46,6 @@ const TopTrips = ({navigation}) => {
       review: "24455 Reviews",
     }
   ];
-
   return (
     <View style={{margin: 20}}>
 
