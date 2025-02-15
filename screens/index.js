@@ -15,11 +15,18 @@ import TopBookings from './top/TopBookings';
 import TopInfo from './top/TopInfo';
 import TopTrips from './top/TopTrips';
 import Payments from './profile/Payments';
-import Settings from './setttings/Settings'
-
+import Settings from './setttings/Settings';
+import Successful from "./bookings/Successful";
+import Failed from "./bookings/Failed";
+import Registration from "./authentication/Registration";
+import Signin from "./authentication/Signin";
 
 export {
     Onboarding,
+    Registration,
+    Signin,
+    Failed,
+    Successful,
     SelectRoom,
     Home,
     Location,

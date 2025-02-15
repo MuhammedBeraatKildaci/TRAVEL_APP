@@ -21,7 +21,7 @@ const TopTab = () => {
         <View>
           <NetworkImage
             source={
-              "https://i1.sndcdn.com/artworks-ouAM7ZgclvZF62pc-IzY9LA-t500x500.jpg"
+            "https://i1.sndcdn.com/artworks-ouAM7ZgclvZF62pc-IzY9LA-t500x500.jpg"
             }
             width={"100%"}
             height={300}
@@ -41,7 +41,7 @@ const TopTab = () => {
           <View style={styles.profile}>
             <Image
               source={{
-                uri:  "https://www.stampthewax.com/wp-content/uploads/2020/02/AAK21539.jpg",
+              uri:  "https://www.stampthewax.com/wp-content/uploads/2020/02/AAK21539.jpg",
               }}
               style={styles.image}
             />

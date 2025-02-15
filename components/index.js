@@ -13,6 +13,8 @@ import ReviewTle from "./Tiles/Reviews/ReviewTle";
 import ReviewsList from "./Hotel/ReviewsList";
 import ProfileTile from "./Reusable/ProfileTile";
 import SettingTile from "./Tiles/Settings/SettingTile";
+import AssetImage from "./Reusable/AssetImage";
+
 export {
     ReusableText,
     ReusableBtn,
@@ -28,5 +30,6 @@ export {
     ReviewTle,
     ReviewsList,
     ProfileTile, 
-    SettingTile
+    SettingTile, 
+    AssetImage
 }
